@@ -1,0 +1,23 @@
+pin=int(input('Enter the 4digit pin:'))
+word=input('Enter the word:')
+store = pin%10
+store1 = len(word)+store
+print(store1)
+store1 = store1//10 + store1%10
+if store1 == 2:
+    int(store1)
+    d =  store1//10
+    store3 = d%10 + store
+    finalpin = ((pin//10)*10)+store3
+    pin2 = int(input('Enter the pin:'))
+    if finalpin == pin2 :
+        print('your account is connected')
+    else:
+        print('incorrect pin')
+else:
+    finalpin = ((pin//10)*10)+store1
+    pin2 = int(input('Enter the pin:'))
+    if finalpin == pin2 :
+        print('your account is connected')
+    else:
+        print('incorrect pin')
